@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="mt-10 p-5 border-0 shadow-2xl bg-gray-50 rounded-md border-gray-600 ">
+  <p class="">Place : {{data.location.name}}</p>
+  <p>Region : {{data.location.region}}</p>
+  <p>Country : {{data.location.country}}</p>
+  <p>Temperature : {{data.current.temp_c}}</p>
+  <img src="{{data.current.condition.icon}}" alt="weather-icon"><p>{{data.current.condition.text}}</p>
+  <p>Time : {{data.location.localtime}}</p>
+</div>
+{% endblock %}
+
+
